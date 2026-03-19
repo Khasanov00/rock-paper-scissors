@@ -3,24 +3,40 @@ function getRandomInt(min, max) {
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCieled) + minCieled);
 }
+let compiChoice=document.getElementById("compChoice");
 
 function getComputerChoice() {
     const choice = getRandomInt(0, 3);
 
     if (choice === 0) {
+    compiChoice.textContent="rock";
         return "rock";
     } else if (choice === 1) {
+         compiChoice.textContent="paper";
         return "paper";
     } else {
+         compiChoice.textContent="scissors";
         return "scissors";
     }
 }
+let rockButton=document.getElementById("rockBtn");
+let scissorsButton=document.getElementById("scissorsBtn");
+let paperButton=document.getElementById("paperBtn");
 
-function getHumanChoice(){
-    const userInput = window.prompt("Enter your choice:");
-    const humanChoice = userInput.toLowerCase();
-    return humanChoice;
+function play(choice) {
+  document.getElementById("playerChoice").textContent = choice;
 }
+
+rockButton.addEventListener("click", ()=> {play("rock")
+getComputerChoice()});
+scissorsButton.addEventListener("click", () => {play("scissors")
+getComputerChoice()});
+paperButton.addEventListener("click", () => {play("paper")
+getComputerChoice()});
+
+
+
+
 
 function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice){
@@ -60,11 +76,14 @@ for (let i = 0; i < 5; i++) {
         computerScore++;
     }
 }
+function showResult() {
+  let result = document.getElementById("result");
 
-if( humanScore > computerScore){
-    console.log("You beat the computer");
-}else if( computerScore > humanScore){
-    console.log("You lost");
-}else{
-    console.log("it is a tie!");
+  if (humanScore > computerScore) {
+    result.textContent = "You beat the computer";
+  } else if (computerScore > humanScore) {
+    result.textContent = "You lost";
+  } else {
+    result.textContent = "It is a tie!";
+  }
 }

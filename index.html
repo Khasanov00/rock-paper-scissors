@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <title>Rock,-Paper,-Scissors</title>
-    <script src="script.js"></script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <h1 id="headline">Rock, Paper, Scissors</h1>
     <p class="texts">Choose one of these:</p>
 <div id="mid">
-    <div class="buttonsDiv"> <button id="scissorsBtn">✌️</button></div>
-    <div class="buttonsDiv"><button id="rockBtn">✊</button></div>
-    <div class="buttonsDiv"><button id="paperBtn">✋</button></div>
-</div>
-<p class="texts">Computer's choice is:</p>
-<p class="texts">Your choice is:</p>
-<p class="texts">Result:</p>
+    <div class="buttonsDiv"> <button id="scissorsBtn"><p class="handSign">✌️</p></button></div>
+    <div class="buttonsDiv"><button id="rockBtn"><p class="handSign">✊</p></button></div>
+    <div class="buttonsDiv"><button id="paperBtn"><p class="handSign">✋</p></button></div>
+ </div>
+<p class="texts" id="computerChoice">Computer's choice:<p id="compChoice" class="texts"></p></p>
+<p class="texts">Your choice:<p id="playerChoice" class="texts"></p></p>
+<p class="texts">Result: <p id="result" class="texts"></p></p>
+<script src="script.js"></script>
 </body>
 </html>
