@@ -1,0 +1,32 @@
+#headline, .texts{
+    text-align: center;
+}
+#headline{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:  60px;;
+   font-weight: bolder;
+}
+.texts{
+    font-size: 30px;
+    font-weight: 600;
+}
+#mid{
+    
+    background-color: antiquewhite;
+    height: 400px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    gap: 40px;
+}
+.handSign{
+    font-size: xx-large;
+    font-weight: bolder;
+    
+}
+.buttons{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    background-color: aqua;
+}
